@@ -16,7 +16,7 @@ Rails.application.routes.draw do
           # this obj will return true for Accept and just 'cuz
           constraints: ApiConstraints.new(version: 1, default: true) do
       # v1 resources
-      
+      resources :users, :only => [:show]
     end
       
   end
