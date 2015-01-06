@@ -1,3 +1,5 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
   # so the application will always look under app/controller/api for the controller code
   namespace :api,

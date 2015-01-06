@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # serializers!
 gem 'active_model_serializers'
+# auth/auz!
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
