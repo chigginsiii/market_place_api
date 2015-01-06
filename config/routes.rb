@@ -1,6 +1,7 @@
 require 'api_constraints'
 
 Rails.application.routes.draw do
+  devise_for :users
   # so the application will always look under app/controller/api for the controller code
   namespace :api,
             # default respond_to is json...
