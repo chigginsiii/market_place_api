@@ -1,9 +1,6 @@
 require 'api_constraints'
 
 Rails.application.routes.draw do
-  get 'sessions/create'
-
-  get 'sessions/destroy'
 
   devise_for :users
   # so the application will always look under app/controller/api for the controller code
