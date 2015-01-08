@@ -85,5 +85,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  config.include Request::JsonHelpers, :type => :controller
 end
