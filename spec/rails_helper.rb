@@ -50,5 +50,11 @@ RSpec.configure do |config|
 
   # make sure we're loading anything in support
   config.include Request::JsonHelpers, :type => :controller
+  config.include Request::HeadersHelpers, :type => :controller
+
+  # for any controller test, set the headers
+  config.before(:each, type: :controller) do
+    include_default_accept_headers
+  end
 
 end
