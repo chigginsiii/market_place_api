@@ -1,6 +1,10 @@
 require 'api_constraints'
 
 Rails.application.routes.draw do
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   devise_for :users
   # so the application will always look under app/controller/api for the controller code
   namespace :api,
@@ -16,6 +20,7 @@ Rails.application.routes.draw do
           constraints: ApiConstraints.new(version: 1, default: true) do
       # v1 resources
       resources :users, :only => [:show, :create, :update, :destroy]
+      resources :sessions, :only => [:create, :destroy]
     end
       
   end
